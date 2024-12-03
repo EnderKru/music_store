@@ -21,4 +21,5 @@ public class User {
         this.money -= music.price;
         System.out.println(this.name + " bought " + music + " for " + music.price);
     }
+    
 }
