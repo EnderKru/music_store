@@ -12,3 +12,4 @@ public class Music {
         return this.name + " by " + this.author + ". genre: " + this.genre;
     }
 }
+
