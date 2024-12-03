@@ -45,7 +45,6 @@ public class Main {
         Dastan.listenMusic(lights);
         Dastan.listenMusic(lights);
         Dastan.listenMusic(lights);
-        Dastan.getDownloads();
         Dastan.getViews();
     }
 }
