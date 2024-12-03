@@ -3,8 +3,14 @@ public class Main {
         Music smile = new Music("Die with a smile", "Ester Junta", "pop");
         Music judas = new Music("Judas", "lady Gaga", "pop");
         Music after = new Music("After hours","the Weekend", "pop");
-        System.out.println(smile.get_info());
-        System.out.println(judas.get_info());
-        System.out.println(after.get_info());
+
+
+        User Kutya = new User("Ermekov Kutmansher", "POP", 800);
+        User Dastan = new User("Dastan David uulu", "indi", 120);
+//        Kutya.getInfo();
+//        Dastan.getInfo();
+        Kutya.getBalance();
+        Kutya.buyMusic(night_call);
+        Kutya.getBalance();
     }
 }
