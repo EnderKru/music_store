@@ -46,6 +46,20 @@ public class User {
         for(int i=0; i<this.playList.size(); i++){
             System.out.println(this.playList.get(i));
             }
+                System.out.println("\n\n");
+    }
+    public void cashIn(double cash){
+        this.money += cash;
+        System.out.println(this.name + " cash in " + cash + " dollars");
+    }
+    public void listenMusic(Music music){
+        if (this.musicExists(music)){
+            System.out.println(this.name + " is listening " + music + "...♫⋆｡♪ ₊˚♬ ﾟ.");
+            music.views += 1;
+        }
+        else{
+            System.out.println(this.name + " can't listen  " + music);
+        }
     }
     
 }
