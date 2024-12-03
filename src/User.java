@@ -16,7 +16,7 @@ public class User {
     public void getBalance(){
          System.out.println(this.name + " has " + this.money) ;
     }
-    public void buyMusic(Music music){
+    public void buyMusic(Music music, Integer rate){
         this.playList.add(music);
         this.money -= music.price;
         System.out.println(this.name + " bought " + music + " for " + music.price);
@@ -24,10 +24,12 @@ public class User {
             System.out.println(this.name + " already has bought " + music);
         }else if(this.money < music.price){
             System.out.println(this.name + " cab't buy " + music + " due to the financial issues ");
-        }
-        else{
+        }else if(rate > 5 || rate < 1){
+            System.out.println("rates can be only from 1 to 5");
+        }else{
             this.playList.add(music);
             this.money -= music.price;
+            music.rates.add(rate);
             System.out.println(this.name + " bought " + music + " for " + music.price);
         }
     }
