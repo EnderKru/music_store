@@ -34,5 +34,18 @@ public class Main {
         Dastan.getBalance();
         Kutya.getPlaylist();
         Dastan.getPlaylist();
+
+
+        Kutya.listenMusic(judas);
+        Kutya.listenMusic(standing);
+        Kutya.listenMusic(lights);
+        Kutya.listenMusic(lights);
+        Kutya.listenMusic(lights);
+        Kutya.listenMusic(lights);
+        Dastan.listenMusic(lights);
+        Dastan.listenMusic(lights);
+        Dastan.listenMusic(lights);
+        Dastan.getDownloads();
+        Dastan.getViews();
     }
 }
