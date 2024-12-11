@@ -1,58 +1,33 @@
 public class Main {
+
     public static void main(String[] args) {
-        Music smile = new Music("Die with a smile", "Ester Junta", "pop",
-                      "https://music.yandex.ru/album/33561249/track/131818709?utm_medium=copy_link", 30);
-        Music judas = new Music("Judas", "lady Gaga", "pop",
-                      "https://music.yandex.ru/album/220348/track/2202297?utm_medium=copy_link", 40);
-        Music after = new Music("After hours","the Weekend", "pop",
-                      "https://music.yandex.ru/album/10327453/track/62885781?utm_medium=copy_link", 45);
-        Music standing = new Music("I'm still standing", "Elton John", "pop",
-                         "https://music.yandex.ru/album/5114/track/20766?utm_medium=copy_link", 60);
-        Music lights = new Music("Blinding lights", "the Weekend", "pop",
-                       "https://music.yandex.ru/album/13707793/track/60292250?utm_medium=copy_link", 50);
-        Music poker = new Music("Poker Face","lady Gaga", "pop",
-                      "https://music.yandex.ru/album/8432683/track/81561?utm_medium=copy_link", 40);
+
+        Genre pop = new Genre("POP");
+        Author clean_bandit = new Author("Clean", "Bandit");
+        Author kavinsky = new Author("Kavinsky", "Kavinsky");
+        Author mitski = new Author("Mitski", "Matsubara");
+
+//
+        Music symphony = new Music("symphony",  clean_bandit, pop,
+                "https://www.youtube.com/watch?v=aatr_2MstrI", 246, 40);
+        Music night_call = new Music("Night call",kavinsky, pop,
+                "https://www.youtube.com/watch?v=MV_3Dpw-BRY", 256, 55);
+        Music real_hero = new Music("Real Hero", clean_bandit,pop,
+                "https://www.youtube.com/watch?v=BHgYtKkSEDA",267, 60);
+        Music my_love = new Music("My Love Mine All Mine ", mitski, pop,
+                "https://www.youtube.com/watch?v=CwGbMYLjIpQ", 138, 50);
+
+        Music never_gone = new Music("Never Gone give you ap", clean_bandit, pop,
+                "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 212, 40);
+
+        User Ryan = new User("Ryan Gosling", "POP", 500);
+        User Temi = new User("Temirlan Emilbekov", "Metal", 120);
+
+        Ryan.buyMusic(night_call, 5);
 
 
-        User Kutya = new User("Ermekov Kutmansher", "POP", 800);
-        User Dastan = new User("Dastan David uulu", "indi", 120);
-//        Kutya.getInfo();
-//        Dastan.getInfo();
-        Kutya.getBalance();
-        Kutya.buyMusic(judas);
-        Kutya.getBalance();
+        never_gone.openVideo();
 
-
-        Kutya.getBalance();
-        Kutya.buyMusic(judas);
-        // Kutya.buyMusic(standing);
-        // Kutya.buyMusic(judas);
-        // Kutya.buyMusic(standing);
-        // Kutya.buyMusic(lights);
-        // Kutya.buyMusic(poker);
-        // Kutya.getBalance();
-        // Dastan.getBalance();
-        // Dastan.buyMusic(smile);
-        Dastan.buyMusic(judas);
-        // Dastan.buyMusic(poker);
-        // Dastan.buyMusic(poker);
-        // Dastan.buyMusic(poker);
-        // Dastan.getBalance();
-        // Kutya.getPlaylist();
-        // Dastan.getPlaylist();
-
-
-        Kutya.listenMusic(judas);
-        Kutya.listenMusic(judas);
-        Kutya.listenMusic(judas);
-        Kutya.listenMusic(judas);
-        Kutya.listenMusic(judas);
-        Kutya.listenMusic(judas);
-        Dastan.listenMusic(judas);
-        Dastan.listenMusic(judas);
-        Dastan.listenMusic(judas);
-        judas.getViews();
-        judas.getRate();
-        judas.openVideo();
     }
+
 }
