@@ -4,24 +4,29 @@ import java.net.URI;
 
 public class Music {
     String name;
-    String author;
-    String genre;
+    Author author;
+    Genre genre;
+    Integer duration_sec;
     double price;
+    Integer downloads;
     Integer views;
     Vector<Integer> rates;
     String url;
-
-    public Music(String name, String author, String genre, String url,  double price)){
+    public Music(String name, Author author, Genre genre, String url, Integer duration_sec, double price){
         this.name = name;
         this.author = author;
         this.genre = genre;
+        this.duration_sec = duration_sec;
         this.url = url;
         this.price = price;
+        this.downloads = 0;
         this.views = 0;
         this.rates = new Vector<Integer>();
+
+        genre.quantity_music++;
+        author.quantity_music++;
     }
-    
-    
+
     public void get_info(){
         System.out.println(this.name + " by " + this.author + ". genre: " + this.genre + ". Costs " +this.price);
     }
@@ -30,16 +35,21 @@ public class Music {
         return this.name + " by " + this.author ;
     }
 
+    public void getDownloads(){
+        System.out.println(this.name + " was downloaded " + this.downloads + " times");
+    }
+
     public void getViews(){
         System.out.println(this.name + " was listened " + this.views + " times");
     }
 
-        public void getRate(){
+    public void getRate(){
         System.out.print(this.name + " got: ");
         for(int i=0; i < Math.round(this.getAverage()); i++){
             System.out.print("⭐");
         }
     }
+
     public double getAverage(){
         double result = 0;
         for(int i=0; i < this.rates.size(); i++){
@@ -47,7 +57,7 @@ public class Music {
         }
         return result / this.rates.size();
     }
-    
+
     public void openVideo(){
         try {
             if (Desktop.isDesktopSupported()) {
@@ -59,5 +69,6 @@ public class Music {
             e.printStackTrace();
         }
     }
-}
 
+
+}
