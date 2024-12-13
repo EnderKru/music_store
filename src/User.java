@@ -32,7 +32,6 @@ public class User {
         else{
             this.playList.add(music);
             this.money -= music.price;
-            music.downloads += 1;
             music.rates.add(rate);
             System.out.println(this.name + " bought " + music + " for " + music.price);
         }
