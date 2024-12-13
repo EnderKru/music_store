@@ -3,30 +3,35 @@ public class Main {
     public static void main(String[] args) {
 
         Genre pop = new Genre("POP");
-        Author clean_bandit = new Author("Clean", "Bandit");
-        Author kavinsky = new Author("Kavinsky", "Kavinsky");
-        Author mitski = new Author("Mitski", "Matsubara");
+        Genre rock = new Genre("ROCK");
+
+        Author Bruno= new Author("Bruno Mars");
+        Author ladyGaga = new Author("Lady Gaga");
+        Author theWeeknd = new Author("The Weeknd");
+        Author eltonJohn = new Author("Elton John");
 
 //
-        Music symphony = new Music("symphony",  clean_bandit, pop,
-                "https://www.youtube.com/watch?v=aatr_2MstrI", 246, 40);
-        Music night_call = new Music("Night call",kavinsky, pop,
-                "https://www.youtube.com/watch?v=MV_3Dpw-BRY", 256, 55);
-        Music real_hero = new Music("Real Hero", clean_bandit,pop,
-                "https://www.youtube.com/watch?v=BHgYtKkSEDA",267, 60);
-        Music my_love = new Music("My Love Mine All Mine ", mitski, pop,
-                "https://www.youtube.com/watch?v=CwGbMYLjIpQ", 138, 50);
+        Music dieWithASmile = new Music("Die With A Smile",  Bruno, pop,
+                "https://youtu.be/AdBzzpq3xV4?si=b8oBEvNe0k1tI77p", 40);
+        Music judas = new Music("Judas",ladyGaga, pop,
+                "https://www.youtube.com/watch?v=qF0PdgefNMY", 55);
+        Music afterHours = new Music("After Hours", theWeeknd,pop,
+                "https://www.youtube.com/watch?v=ygTZZpVkmKg",60);
+        Music imStillStanding = new Music("I'm Still Standing", eltonJohn, rock,
+                "https://music.yandex.ru/album/5114/track/20766?utm_medium=copy_link", 50);
 
-        Music never_gone = new Music("Never Gone give you ap", clean_bandit, pop,
-                "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 212, 40);
+        Music blindingLights = new Music("Blinding Lights", theWeeknd, pop,
+                "https://www.youtube.com/watch?v=fHI8X4OXluQ", 40);
+        Music pokerFace = new Music("Poker Face", ladyGaga, pop, "https://www.youtube.com/watch?v=gsLvizl5j4E", 40);
 
-        User Ryan = new User("Ryan Gosling", "POP", 500);
-        User Temi = new User("Temirlan Emilbekov", "Metal", 120);
+        User nikita = new User("Nikita Viktorovic", "POP", 500);
+        User bayzak = new User("Bayzak David uulu", "ROCK", 120);
 
-        Ryan.buyMusic(night_call, 5);
+        bayzak.buyMusic(imStillStanding, 5);
 
 
-        never_gone.openVideo();
+        dieWithASmile.openVideo();
+
 
     }
 
