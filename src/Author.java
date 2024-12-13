@@ -1,17 +1,15 @@
 public class Author {
     String name;
-    String surname;
     Integer quantity_music;
 
 
-    public Author(String name, String surname){
+    public Author(String name){
         this.name = name;
-        this.surname = surname;
         this.quantity_music = 0;
     }
 
     public String toString(){
-        return this.name + " " + this.surname;
+        return this.name;
     }
 
     public String getInfo(){
