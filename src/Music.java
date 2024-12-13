@@ -6,20 +6,16 @@ public class Music {
     String name;
     Author author;
     Genre genre;
-    Integer duration_sec;
     double price;
-    Integer downloads;
     Integer views;
     Vector<Integer> rates;
     String url;
-    public Music(String name, Author author, Genre genre, String url, Integer duration_sec, double price){
+    public Music(String name, Author author, Genre genre, String url, double price){
         this.name = name;
         this.author = author;
         this.genre = genre;
-        this.duration_sec = duration_sec;
         this.url = url;
         this.price = price;
-        this.downloads = 0;
         this.views = 0;
         this.rates = new Vector<Integer>();
 
@@ -33,10 +29,6 @@ public class Music {
 
     public String toString(){
         return this.name + " by " + this.author ;
-    }
-
-    public void getDownloads(){
-        System.out.println(this.name + " was downloaded " + this.downloads + " times");
     }
 
     public void getViews(){
